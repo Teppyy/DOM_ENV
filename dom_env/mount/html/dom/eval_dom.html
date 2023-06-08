@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1>eval</h1>
+    <p>Let's do arithmetic</p>
+    <p>GET : param</p>
+    <script>
+    function eval_dom(query) {
+       var result = eval(query);
+       document.write("result : "+result);
+    }
+    var query = (new URLSearchParams(window.location.search)).get('param');
+    if(query) {
+       eval_dom(query);
+    }
+    </script>
+  </body>
+</html>
